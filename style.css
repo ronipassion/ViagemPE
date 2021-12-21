@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 20px;
+    
+}
+      
+
+.navbar {
+
+    
+    width: 100%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+
+        }
+
+.navbar a {
+
+    color: rgb(0, 0, 0);
+    margin: auto 20px auto 20px;
+    text-decoration: none;
+    font-weight: bold;
+
+        }
+
+.navbar li {
+
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+
+        }
+
+footer {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding: 10px;
+    padding-right: 10px;
+}
+
+table {
+    text-align: center;
+}
+

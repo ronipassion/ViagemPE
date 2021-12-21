@@ -1,0 +1,49 @@
+﻿@model ViagemPE.Models.Promo
+
+@{
+    ViewData["Title"] = "Editar Promoção";
+}
+
+<arh1>Editar</arh1>
+
+<h4>Promo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_Promo" />
+            <div class="form-group">
+                <label asp-for="Primeira_Cidade" class="control-label"></label>
+                <input asp-for="Primeira_Cidade" class="form-control" />
+                <span asp-validation-for="Primeira_Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Segunda_Cidade" class="control-label"></label>
+                <input asp-for="Segunda_Cidade" class="form-control" />
+                <span asp-validation-for="Segunda_Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diarias" class="control-label"></label>
+                <input asp-for="Diarias" class="form-control" />
+                <span asp-validation-for="Diarias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taxa_Desconto" class="control-label"></label>
+                <input asp-for="Taxa_Desconto" class="form-control" />
+                <span asp-validation-for="Taxa_Desconto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

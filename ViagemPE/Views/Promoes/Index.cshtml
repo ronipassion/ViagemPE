@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ViagemPE.Models.Promo>
+
+@{
+    ViewData["Title"] = "Promoções";
+}
+
+<h1>Promoções</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-secondary">Criar nova promo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Primeira_Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Segunda_Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diarias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taxa_Desconto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Primeira_Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Segunda_Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diarias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taxa_Desconto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Promo" class="btn btn-primary">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Promo" class="btn btn-primary">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Promo" class="btn btn-danger">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

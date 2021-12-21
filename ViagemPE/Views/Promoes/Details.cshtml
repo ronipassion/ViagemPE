@@ -1,0 +1,42 @@
+﻿@model ViagemPE.Models.Promo
+
+@{
+    ViewData["Title"] = "Detalhes Promocionais";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Promo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Primeira_Cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Primeira_Cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Segunda_Cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Segunda_Cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Diarias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Diarias)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Taxa_Desconto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Taxa_Desconto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Promo">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
